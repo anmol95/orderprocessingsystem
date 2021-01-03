@@ -5,7 +5,7 @@ Resources:
   function:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://lambda-artifacts-193d5c659c8d091c/aecf968fc65e5df50c62e3e2d62c9e49
+      CodeUri: s3://lambda-artifacts-054859628a91e838/8e8396c7a31e31a1a1c26c6f0a9a0590
       Handler: orderprocessingsystem.Handler
       Runtime: java8
       Description: Java function
@@ -22,8 +22,8 @@ Resources:
   libs:
     Type: AWS::Serverless::LayerVersion
     Properties:
-      LayerName: java-events-v1sdk-lib
+      LayerName: orderprocessingsystem-lib
       Description: Dependencies for the Java S3 sample app.
-      ContentUri: s3://lambda-artifacts-193d5c659c8d091c/99b195d8c3763d762d893ca3aa0976e2
+      ContentUri: s3://lambda-artifacts-054859628a91e838/e38f3615500930d469d8cd639c717cf0
       CompatibleRuntimes:
       - java8

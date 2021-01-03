@@ -5,7 +5,7 @@ Resources:
   function:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: build/distributions/java-events-v1sdk.zip
+      CodeUri: build/distributions/orderprocessingsystem.zip
       Handler: orderprocessingsystem.Handler
       Runtime: java8
       Description: Java function
@@ -23,8 +23,8 @@ Resources:
   libs:
     Type: AWS::Serverless::LayerVersion
     Properties:
-      LayerName: java-events-v1sdk-lib
+      LayerName: orderprocessingsystem-lib
       Description: Dependencies for the Java S3 sample app.
-      ContentUri: build/java-events-v1sdk-lib.zip
+      ContentUri: build/orderprocessingsystem-lib.zip
       CompatibleRuntimes:
         - java8

@@ -5,7 +5,7 @@ Resources:
   function:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: target/java-events-v1sdk-1.0-SNAPSHOT.jar
+      CodeUri: target/orderprocessingsystem-1.0-SNAPSHOT.jar
       Handler: orderprocessingsystem.Handler
       Runtime: java8
       Description: Java function

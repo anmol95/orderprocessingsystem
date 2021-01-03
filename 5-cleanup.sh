@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eo pipefail
-STACK=java-events-v1sdk
+STACK=orderprocessingsystem
 if [[ $# -eq 1 ]] ; then
     STACK=$1
     echo "Deleting stack $STACK"
