@@ -5,7 +5,7 @@ Resources:
   function:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://lambda-artifacts-054859628a91e838/8e8396c7a31e31a1a1c26c6f0a9a0590
+      CodeUri: s3://lambda-artifacts-054859628a91e838/44ea48e2fde523793c5f8715a513af63
       Handler: orderprocessingsystem.Handler
       Runtime: java8
       Description: Java function
