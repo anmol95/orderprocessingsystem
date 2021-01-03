@@ -1,6 +1,6 @@
-# Basic function with event library types and the AWS SDK (Java)
+# Order Processing System
 
-This sample application shows the use of the `aws-lambda-java-events` library with event types that require AWS SDK as a dependency. A separate handler class is defined for each input type. For other event types (which don't require the AWS SDK), see the `java-events` sample.
+This sample application hosts the complete order processing system.
 
 The project includes function code and supporting resources:
 - `src/main` - A Java function.
@@ -29,7 +29,7 @@ This setting enables the AWS CLI v2 to load JSON events from a file, matching th
 # Setup
 Download or clone this repository.
 
-    $ git clone https://github.com/awsdocs/aws-lambda-developer-guide.git
+    $ git clone https://github.com/anmol95/orderprocessingsystem
     $ cd orderprocessingsystem
 
 Run `1-create-bucket.sh` to create a new bucket for deployment artifacts.
@@ -61,20 +61,6 @@ You can also build the application with Maven. To use maven, add `mvn` to the co
     [INFO] --------------------------------[ jar ]---------------------------------
     ...
 
-# Test
-Run `4-invoke.sh` to invoke the function.
-
-    orderprocessingsystem$ ./4-invoke.sh
-    {
-        "StatusCode": 200,
-        "ExecutedVersion": "$LATEST"
-    }
-    "200 OK"
-
-Let the script invoke the function a few times and then press `CRTL+C` to exit.
-
-The application uses AWS X-Ray to trace requests. Open the [X-Ray console](https://console.aws.amazon.com/xray/home#/service-map) to view the service map.
-
 Choose a node in the main function graph. Then choose **View traces** to see a list of traces. Choose any trace to view a timeline that breaks down the work done by the function.
 
 # Configure Handler Class
@@ -83,7 +69,7 @@ To use a different handler, change the value of the Handler setting in the appli
 
     Properties:
       CodeUri: build/distributions/orderprocessingsystem.zip
-      Handler: example.HandlerKinesis
+      Handler: orderprocessingsystem.Handler
 
 Deploy the change, and then use the invoke script to test the new configuration. Pass the handler type key as an argument to the invoke script.
 
