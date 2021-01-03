@@ -1,0 +1,4 @@
+/Users/anmoa/aws-lambda-developer-guide/sample-apps/java-events-v1sdk/src/main/java/example/Handler.java
+/Users/anmoa/aws-lambda-developer-guide/sample-apps/java-events-v1sdk/src/main/java/example/Util.java
+/Users/anmoa/aws-lambda-developer-guide/sample-apps/java-events-v1sdk/src/main/java/example/HandlerKinesis.java
+/Users/anmoa/aws-lambda-developer-guide/sample-apps/java-events-v1sdk/src/main/java/example/HandlerDynamoDB.java

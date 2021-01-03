@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Lambda application that calls the Lambda API.
+Resources:
+  function:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://lambda-artifacts-193d5c659c8d091c/aecf968fc65e5df50c62e3e2d62c9e49
+      Handler: orderprocessingsystem.Handler
+      Runtime: java8
+      Description: Java function
+      MemorySize: 512
+      Timeout: 15
+      Policies:
+      - AWSLambdaBasicExecutionRole
+      - AWSLambdaReadOnlyAccess
+      - AWSXrayWriteOnlyAccess
+      - AWSLambdaVPCAccessExecutionRole
+      Tracing: Active
+      Layers:
+      - Ref: libs
+  libs:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: java-events-v1sdk-lib
+      Description: Dependencies for the Java S3 sample app.
+      ContentUri: s3://lambda-artifacts-193d5c659c8d091c/99b195d8c3763d762d893ca3aa0976e2
+      CompatibleRuntimes:
+      - java8
